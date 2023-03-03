@@ -11,6 +11,17 @@ const questions: inquirer.QuestionCollection = [
             }
             return true;
         }
+    },
+    {
+        type: 'input',
+        name: 'inverse',
+        message: 'Enter a text to invert it',
+        validate: (input: string) => {
+            if (input.length === 0) {
+                return 'Please enter a text';
+            }
+            return true;
+        }
     }
 ]
 
@@ -32,4 +43,5 @@ const isFibonacci = (number: number): boolean => {
 inquirer.prompt(questions).then((answers) => {
     const number = Number(answers.fibonacci);
     console.log(`Is ${number} a Fibonacci number? It's ${isFibonacci(number)}`);
+    console.log(`Inverted text: ${answers.inverse.split('').reverse().join('')}`);
 });
