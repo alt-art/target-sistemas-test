@@ -2,6 +2,10 @@
 
 Um teste para uma vaga de desenvolvedor
 
+Dado um numero inteiro, retorne se ele esta na sequencia de fibonacci
+
+Dados um texto, retorne o texto invertido
+
 ## Rodando o projeto
 
 ### Versão em python
